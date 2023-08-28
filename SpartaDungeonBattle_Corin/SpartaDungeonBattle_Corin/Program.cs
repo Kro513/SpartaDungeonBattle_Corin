@@ -2,7 +2,8 @@
 {
 	internal class Program
 	{
-		public string Fight;
+		int Damage;
+		
 		static void Main(string[] args)
 		{
 			Console.WriteLine("전투종료");
