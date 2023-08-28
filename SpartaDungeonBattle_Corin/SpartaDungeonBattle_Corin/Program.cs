@@ -1,8 +1,12 @@
-﻿namespace SpartaDungeonBattle_Corin
+namespace SpartaDungeonBattle_Corin
 {
 	static class EndBattle
 	{
-		static bool BattleResult = true;
+		static bool BattleResult
+		{
+			if (player.Hp <= 0)? BattleResult = false : true;
+		}
+
 
 		static void DisplayBattleResult()
 		{
@@ -48,6 +52,4 @@
 			Console.WriteLine("===Game Over===");
 		}
 	}
-
-	
 }
