@@ -45,7 +45,7 @@
 		{
 			Console.BackgroundColor = ConsoleColor.White;
 			Console.ForegroundColor = ConsoleColor.Magenta;
-			Console.WriteLine("===Game Over===")
+			Console.WriteLine("===Game Over===");
 		}
 	}
 
