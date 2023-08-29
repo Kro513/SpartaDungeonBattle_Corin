@@ -1,6 +1,7 @@
-﻿namespace SpartaDeongeon
+﻿using System;
+
+namespace SpartaDeongeon
 {
-    // 직업 열거형
     enum CharacterClass
     {
         Warrior,
@@ -13,12 +14,40 @@
         public string Name { get; set; }
         public CharacterClass Class { get; set; }
         public int Level { get; set; }
+        public int Str { get; set; }
+        public int Int { get; set; }
+        public int Dex { get; set; }
+
+        private readonly Random random = new Random();
 
         public Character(string name, CharacterClass characterClass)
         {
             Name = name;
             Class = characterClass;
             Level = 1;
+            InitializeStats();
+        }
+
+        private void InitializeStats()
+        {
+            switch (Class)
+            {
+                case CharacterClass.Warrior:
+                    Str = random.Next(6, 11);
+                    Int = random.Next(1, 11);
+                    Dex = random.Next(1, 11);
+                    break;
+                case CharacterClass.Mage:
+                    Str = random.Next(1, 11);
+                    Int = random.Next(6, 11);
+                    Dex = random.Next(1, 11);
+                    break;
+                case CharacterClass.Archer:
+                    Str = random.Next(1, 11);
+                    Int = random.Next(1, 11);
+                    Dex = random.Next(6, 11);
+                    break;
+            }
         }
 
         public void DisplayCharacterInfo()
@@ -26,6 +55,9 @@
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Class: {Class}");
             Console.WriteLine($"Level: {Level}");
+            Console.WriteLine($"Str: {Str}");
+            Console.WriteLine($"Int: {Int}");
+            Console.WriteLine($"Dex: {Dex}");
         }
     }
 
@@ -35,12 +67,11 @@
         {
             Console.WriteLine("캐릭터 생성에 오신걸 환영합니다!");
 
-            // 캐릭터 이름 입력 받기
-            Console.Write("캐릭터 이름을 입력해주세요: ");
+            Console.Write("닉네임을 정해주세요: ");
             string name = Console.ReadLine();
 
-            // 직업 선택
-            Console.WriteLine("직업을 선택하세요:");
+
+            Console.WriteLine("Choose a class:");
             Console.WriteLine("1. 전사");
             Console.WriteLine("2. 마법사");
             Console.WriteLine("3. 궁수");
@@ -65,10 +96,10 @@
                     break;
             }
 
-            // 캐릭터 생성
+
             Character newCharacter = new Character(name, selectedClass);
 
-            Console.WriteLine("\n캐릭터가 생성되었습니다!");
+            Console.WriteLine("\n캐릭터 생성이 완료되었습니다!");
             newCharacter.DisplayCharacterInfo();
         }
     }
