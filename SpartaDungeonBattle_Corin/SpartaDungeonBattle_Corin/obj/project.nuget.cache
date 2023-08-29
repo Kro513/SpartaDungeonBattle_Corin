@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rfjwoXwogKDtfmvVETnuGGSrDy5VbgUQMhv67J4wkNQwix+gwkT/MrRE/SjVkpPLxf8ECS3IoTiRV0got6vnaA==",
+  "dgSpecHash": "61f/eN/Zbjsh1AtvhL5vaBxwQDe7Sr1Rey7kbP6Wh+S2iDnydS8UJrN7ziJ3QMms3OSdT2mN3TS+Xul3VFwUsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\kkh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512",
-    "C:\\Users\\kkh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.21\\microsoft.netcore.app.ref.6.0.21.nupkg.sha512",
-    "C:\\Users\\kkh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.21\\microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
-    "C:\\Users\\kkh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.21\\microsoft.netcore.app.host.win-x64.6.0.21.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\gr199\\OneDrive\\바탕 화면\\깃허브\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

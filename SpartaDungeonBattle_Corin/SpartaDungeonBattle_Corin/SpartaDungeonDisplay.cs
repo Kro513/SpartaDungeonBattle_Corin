@@ -19,9 +19,11 @@ namespace SpartaDungeonBattle_Corin
 		static void Main(string[] args)
 		{
 			CharacterSetting();
-			DisplayStartScreen();
+            GameStartScreen();
+            DisplayStartScreen();
 			DisplayGameIntro();
 			DisplayStatus();
+
 		}
 
 		#region 초기설정
@@ -35,8 +37,47 @@ namespace SpartaDungeonBattle_Corin
 
 		#region 게임 화면 출력
 
-		//첫 화면
-		static void DisplayStartScreen()
+		public static void GameStartScreen()
+		{
+			Console.Title = "스파르타던전";
+
+			Console.WriteLine("1. 게임 시작");
+			Console.WriteLine("2. 게임 종료");
+
+			Console.Write("\n원하시는행동을 입력해주세요: ");
+			Console.Write(">>");
+
+
+			int choice = int.Parse(Console.ReadLine());
+
+			switch (choice)
+			{
+				case 1:
+					Console.WriteLine("\n게임을 시작합니다!");
+
+
+
+					break;
+
+
+				case 2:
+					Console.WriteLine("\n게임을 종료합니다");
+					Environment.Exit(0);
+
+
+					break;
+
+
+				default:
+					Console.WriteLine("\n잘못된 입력입니다.");
+
+
+					break;
+			}
+		}
+
+            //첫 화면
+            static void DisplayStartScreen()
 		{
 			Console.Clear();
 
