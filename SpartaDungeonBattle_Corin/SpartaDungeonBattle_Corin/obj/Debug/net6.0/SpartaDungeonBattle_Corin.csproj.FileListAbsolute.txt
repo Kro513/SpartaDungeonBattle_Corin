@@ -1,0 +1,15 @@
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\bin\Debug\net6.0\SpartaDungeonBattle_Corin.exe
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\bin\Debug\net6.0\SpartaDungeonBattle_Corin.deps.json
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\bin\Debug\net6.0\SpartaDungeonBattle_Corin.runtimeconfig.json
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\bin\Debug\net6.0\SpartaDungeonBattle_Corin.dll
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\bin\Debug\net6.0\SpartaDungeonBattle_Corin.pdb
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.csproj.AssemblyReference.cache
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.AssemblyInfoInputs.cache
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.AssemblyInfo.cs
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.csproj.CoreCompileInputs.cache
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.dll
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\refint\SpartaDungeonBattle_Corin.dll
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.pdb
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\SpartaDungeonBattle_Corin.genruntimeconfig.cache
+C:\Users\kkh\Desktop\팀퓨ㅡ\새 폴더\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\SpartaDungeonBattle_Corin\obj\Debug\net6.0\ref\SpartaDungeonBattle_Corin.dll

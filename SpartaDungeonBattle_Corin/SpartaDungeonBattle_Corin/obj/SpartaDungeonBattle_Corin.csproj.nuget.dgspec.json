@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gr199\\OneDrive\\바탕 화면\\깃허브\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj": {}
+    "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gr199\\OneDrive\\바탕 화면\\깃허브\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj": {
+    "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gr199\\OneDrive\\바탕 화면\\깃허브\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+        "projectUniqueName": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
         "projectName": "SpartaDungeonBattle_Corin",
-        "projectPath": "C:\\Users\\gr199\\OneDrive\\바탕 화면\\깃허브\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
-        "packagesPath": "C:\\Users\\gr199\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gr199\\OneDrive\\바탕 화면\\깃허브\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\obj\\",
+        "projectPath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+        "packagesPath": "C:\\Users\\kkh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gr199\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kkh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,6 +50,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
