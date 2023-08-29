@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\kkh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+      "projectUniqueName": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
       "projectName": "SpartaDungeonBattle_Corin",
-      "projectPath": "C:\\Users\\user\\Desktop\\Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\obj\\",
+      "projectPath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+      "packagesPath": "C:\\Users\\kkh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kkh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,12 +56,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
