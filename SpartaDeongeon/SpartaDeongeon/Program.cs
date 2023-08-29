@@ -71,7 +71,7 @@ namespace SpartaDeongeon
             string name = Console.ReadLine();
 
 
-            Console.WriteLine("Choose a class:");
+            Console.WriteLine("직업을 선택해주세요:");
             Console.WriteLine("1. 전사");
             Console.WriteLine("2. 마법사");
             Console.WriteLine("3. 궁수");
