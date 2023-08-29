@@ -193,17 +193,9 @@ namespace SpartaDungeonBattle_Corin
 
 	public class Warrior : Character
 	{
-		public Warrior()
+		public Warrior() : base("dd", "전사", 1, 100, 100, 10, 10, 1500, false)
 		{
-			Name = "플레이어";
-			Class = "전사";
-			Level = 1;
-			Hp = 100;
-			Hp2 = Hp;
-			Atk = 10;
-			Def = 10;
-			Gold = 1500;
-			IsDead = false;
+
 		}
 
 		public void Takedamage(int damage, string name1) // 캐릭터가 맞을때
