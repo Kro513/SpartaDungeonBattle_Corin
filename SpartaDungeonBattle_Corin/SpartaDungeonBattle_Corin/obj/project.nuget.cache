@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MJG2iOqzGsYr89Uu73rrxuY3JU7lBduUeXJz3N2mmhK+8p94I4xuUsQqgrb8/kIretopKEG9AuNGeQF6O2TVyQ==",
+  "dgSpecHash": "+4Tj0nl/uX4ai7QnbJKs2zLc1jv/bUG7Dy5yeB2UUGBrX+42oHmWpoiiFFcFknl+y2hLN1XL6ZGuaCucYvuFUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+  "projectFilePath": "C:\\Users\\kkh\\Downloads\\clone\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kkh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512",
     "C:\\Users\\kkh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.21\\microsoft.netcore.app.ref.6.0.21.nupkg.sha512",

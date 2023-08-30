@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+      "projectUniqueName": "C:\\Users\\kkh\\Downloads\\clone\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
       "projectName": "SpartaDungeonBattle_Corin",
-      "projectPath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
+      "projectPath": "C:\\Users\\kkh\\Downloads\\clone\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin.csproj",
       "packagesPath": "C:\\Users\\kkh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kkh\\Desktop\\팀퓨ㅡ\\새 폴더\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\obj\\",
+      "outputPath": "C:\\Users\\kkh\\Downloads\\clone\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\SpartaDungeonBattle_Corin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kkh\\AppData\\Roaming\\NuGet\\NuGet.Config",
