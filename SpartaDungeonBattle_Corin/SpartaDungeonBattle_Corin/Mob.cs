@@ -8,6 +8,7 @@ using static SpartaDungeonBattle_Corin.Program;
 namespace SpartaDungeonBattle_Corin
 {
     //몹 설정
+
     public class Mob
     {
         public string Name { get; }
@@ -16,12 +17,14 @@ namespace SpartaDungeonBattle_Corin
 
         public bool IsDead { get; set; }
         public int DeadCount { get; set; }
-        public Mob(string name, int hp, int atk)
+        public static Character Player { get; set; }
+        public Mob(string name, int hp, int atk, Character player)
         {
             Name = name;
             Hp = hp;
             Atk = atk;
             DeadCount = 0;
+            Player = player;
             IsDead = false;
         }
 
@@ -39,6 +42,7 @@ namespace SpartaDungeonBattle_Corin
             Console.WriteLine("[당신의 턴]");
             Console.WriteLine("");
             Console.WriteLine("{0}의 공격!!", name1);
+            Console.WriteLine();
             damage = new Random().Next((int)(damage - damage * 0.1), (int)(damage + damage * 0.1) + 1);
             int accury = new Random().Next(1, 11);
             if (accury > 9) //회피 했을때 = 미적중
@@ -65,7 +69,7 @@ namespace SpartaDungeonBattle_Corin
                     }
                     else
                     {
-                        Console.WriteLine("HP {0} -> Hp{1}", Hp, Hp - damage);
+                        Console.WriteLine("HP {0} -> Hp {1}", Hp, Hp - damage);
                     }
                     Hp -= damage;
                     Console.WriteLine("");
@@ -127,7 +131,7 @@ namespace SpartaDungeonBattle_Corin
                 }
             }
             Enemy enemy = new Enemy();
-            Warrior warrior = new Warrior();
+
             List<Mob> mobs = new List<Mob>();
             public void BattleStart()
             {
@@ -147,13 +151,17 @@ namespace SpartaDungeonBattle_Corin
                     int randomhp = new Random().Next(5, 9); //몬스터 체력랜덤
                     int randomatk = new Random().Next(2, 9); // 몬스터 공격력랜덤
 
-                    Mob mob = new Mob(mobname, randomhp, randomatk);
+                    Mob mob = new Mob(mobname, randomhp, randomatk, player);
 
                     mobs.Add(mob);
                 }
+                Console.Clear();
+
+                Console.WriteLine();
                 Console.WriteLine("=============================");
                 Console.WriteLine("Battle!");
                 Console.WriteLine("");
+                Console.WriteLine();
                 Console.WriteLine("");
 
                 foreach (var text in mobs) //몬스터 출력
@@ -164,15 +172,18 @@ namespace SpartaDungeonBattle_Corin
                 Console.WriteLine("");
                 Console.WriteLine("-----------------------------");
                 Console.WriteLine("[내정보]");
-                Console.WriteLine("Lv.1 Chad 전사");
-                Console.WriteLine("Hp 100/100");
+                Console.WriteLine();
+                Console.WriteLine($"Lv.{player.Level} {player.Name} {player.Class}");
+                Console.WriteLine();
+                Console.WriteLine($"Hp {player.Hp}/100");
                 Console.WriteLine("-----------------------------");
+                Console.WriteLine();
                 Console.WriteLine("0. 취소");
                 Console.WriteLine("");
                 Console.WriteLine("대상을 선택해주세요");
                 Console.Write(">>");
 
-                while (warrior.IsDead == false && !mobs.All(mob => mob.IsDead))
+                while (player.IsDead == false && !mobs.All(mob => mob.IsDead))
                 {
                     int input = int.Parse(Console.ReadLine());
 
@@ -187,8 +198,8 @@ namespace SpartaDungeonBattle_Corin
                         else
                         {
                             enemy.OnAttack += selectedMob.Takedamage;
-                            enemy.OnHeatAttack += warrior.Takedamage;
-                            enemy.Attack(warrior.Atk, warrior.Name);
+                            enemy.OnHeatAttack += player.Takedamage;
+                            enemy.Attack(player.Atk, player.Name);
                             Console.ReadKey();
                             Thread.Sleep(100);
                             foreach (var mob in mobs)
@@ -217,7 +228,7 @@ namespace SpartaDungeonBattle_Corin
                             }
 
                             enemy.OnAttack -= selectedMob.Takedamage;
-                            enemy.OnHeatAttack -= warrior.Takedamage;
+                            enemy.OnHeatAttack -= player.Takedamage;
 
                         }
                     }
@@ -228,7 +239,7 @@ namespace SpartaDungeonBattle_Corin
 
 
                 }
-                if (warrior.IsDead == false)
+                if (player.IsDead == false)
                 {
                     BattleEnd();
                     BattleReword();
@@ -243,8 +254,8 @@ namespace SpartaDungeonBattle_Corin
                 Console.WriteLine("");
                 ChangeColor("Victory", 2);
                 Console.WriteLine("");
-                Console.WriteLine("{0}", warrior.Name);
-                Console.WriteLine("남은 Hp : {0}", warrior.Hp);
+                Console.WriteLine("{0}", player.Name);
+                Console.WriteLine("남은 Hp : {0}", Player.Hp);
                 Console.WriteLine("");
                 Console.WriteLine("0. 다음");
                 Console.WriteLine("");
