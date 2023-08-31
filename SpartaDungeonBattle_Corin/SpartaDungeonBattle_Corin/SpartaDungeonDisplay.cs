@@ -109,7 +109,7 @@ namespace SpartaDungeonBattle_Corin
 
 
         //게임 진입
-        static void DisplayGameIntro()
+        public static void DisplayGameIntro()
         {
             Battle battle = new Battle();
 
@@ -177,7 +177,7 @@ namespace SpartaDungeonBattle_Corin
         #region Utility
 
         //화면 전환 함수
-        static int CheckValidInput(int min, int max)
+       public static int CheckValidInput(int min, int max)
         {
             while (true)
             {

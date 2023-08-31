@@ -244,6 +244,9 @@ namespace SpartaDungeonBattle_Corin
                     BattleEnd();
                     BattleGetExp();
 					BattleReword();
+                    
+                    
+                    
                 }
             }
             public void BattleEnd()
@@ -294,8 +297,48 @@ namespace SpartaDungeonBattle_Corin
             public void BattleReword()
             {
                 Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("====================================");
                 Console.WriteLine("보상을 선택해주세요");
-                Console.ReadLine();
+                Console.WriteLine("1.체력 회복");
+                Console.WriteLine("2.힘의 물약");
+                Console.WriteLine("3.방어의 물약");
+                Console.WriteLine("====================================");
+                int input = CheckValidInput(1, 3);
+
+                switch(input)
+                {
+                    case 1: RewordHp();Console.ReadLine();
+                        break; 
+                    case 2: RewordAtk(); Console.ReadLine();
+                        break;
+                    case 3: RewordDef(); Console.ReadLine();
+                        break;
+                }
+
+            }
+
+            public void RewordHp()
+            {
+                Console.WriteLine("");
+                ChangeColor("Hp를 회복하였습니다 !", 6);
+                Console.WriteLine("Hp : {0} -> {1}",player.Hp,player.Hp+20);
+                player.Hp += 20;
+                
+            }
+            public void RewordAtk()
+            {
+                Console.WriteLine("");
+                ChangeColor("공격력이 상승하였습니다. !", 6);
+                Console.WriteLine("공격력 : {0} -> {1}",player.Atk,player.Atk+1);
+                player.Atk += 1;
+            }
+            public void RewordDef()
+            {
+                Console.WriteLine("");
+                ChangeColor("방어가 상승하였습니다. !", 6);
+                Console.WriteLine("방어력 : {0} -> {1}",player.Def,player.Def+1);
+                player.Def += 1;
             }
 
         }
