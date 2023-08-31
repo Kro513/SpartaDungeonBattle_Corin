@@ -13,7 +13,7 @@ namespace SpartaDungeonBattle_Corin
 
     public class Program
     {
-        public static Character player = new Character("", "", 0, 0, 0, 1500, false);
+        public static Character player = new Character("", "", 0, 0, 0, 0, false, 0);
 
         public delegate void TakedamageHandler(int damage, string name);
 
@@ -85,7 +85,7 @@ namespace SpartaDungeonBattle_Corin
                     player.Atk = random.Next(1, 11);
                     player.Def = random.Next(1, 11);
                     player.Hp = random.Next(80, 110);
-                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false);
+                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp);
 
                     break;
                 case 2:
@@ -93,15 +93,15 @@ namespace SpartaDungeonBattle_Corin
                     player.Atk = random.Next(1, 11);
                     player.Def = random.Next(6, 11);
                     player.Hp = random.Next(50, 110);
-                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 0, false);
-                    break;
+                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp);
+					break;
                 case 3:
                     player.Class = "궁수";
                     player.Atk = random.Next(6, 11);
                     player.Def = random.Next(1, 11);
                     player.Hp = random.Next(50, 110);
-                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 0, false);
-                    break;
+                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp);
+					break;
             }
 
         }
@@ -148,7 +148,7 @@ namespace SpartaDungeonBattle_Corin
             Console.WriteLine("캐릭터의 정보가 표시됩니다.");
             Console.WriteLine();
             Console.WriteLine($"Lv. {player.Level}");
-            Console.WriteLine($"Exp. {player.Experience} / {player.Level * 100}");
+            Console.WriteLine($"Exp. {player.Experience} / {player.Level * 10}");
             Console.WriteLine($"{player.Name}({player.Class})");
             Console.WriteLine($"공격력 : {player.Atk}");
             Console.WriteLine($"방어력 : {player.Def}");
