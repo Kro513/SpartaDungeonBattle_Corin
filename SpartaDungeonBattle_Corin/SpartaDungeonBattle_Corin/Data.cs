@@ -30,16 +30,26 @@ namespace SpartaDungeonBattle_Corin
         public int Gold { get; set; }
         public bool IsDead { get; set; }
 
-        public Character(string name, string classtype, int level, int hp, int atk, int def, int gold, bool isDead)
+        public int Experience { get; set; }
+
+        public Character(string name, string classtype, int hp, int atk, int def, int gold, bool isDead)
         {
             Name = name;
             Class = classtype;
-            Level = level;
+            Level = 1;
             Hp = hp;
             Atk = atk;
             Def = def;
             Gold = gold;
             IsDead = false;
+            Experience = 0;
+        }
+
+        public virtual void LevelUp()
+        {
+            Experience = Experience % (Level * 10);
+            Level++;
+            Console.WriteLine($"{Name}이 {Level}레벨로 레벨업했습니다!");
         }
         public void Takedamage(int damage, string name1)
         {
@@ -78,28 +88,48 @@ namespace SpartaDungeonBattle_Corin
     //캐릭터 상속 -> 워리어
     public class Warrior : Character
     {
-        public Warrior() : base("", "", 1, 100, 10, 10, 1500, false)
+        public Warrior() : base("", "", 100, 10, 10, 1500, false)
         {
 
 
         }
-    }
+		public override void LevelUp()
+		{
+			base.LevelUp();
+			Hp += 20;
+			Console.WriteLine($"{Name}의 체력이 올랐습니다!. 현재 HP: {Hp}/{Program.player.Hp}");
+		}
+	}
 
     //캐릭터 상속 -> 메이지
     public class Mage : Character
     {
-        public Mage() : base("", "", 1, 100, 10, 10, 1500, false)
+        public Mage() : base("", "", 100, 10, 10, 1500, false)
         {
         }
-    }
+
+		public override void LevelUp()
+		{
+			base.LevelUp();
+			Atk += 10;
+			Console.WriteLine($"{Name}의 공격력이 올랐습니다!. {Atk - 10} => {Atk}");
+		}
+	}
 
     //캐릭터 상속 -> 아처
     public class Archer : Character
     {
-        public Archer() : base("", "", 1, 100, 10, 10, 1500, false)
+        public Archer() : base("", "", 100, 10, 10, 1500, false)
         {
 
         }
-    }
+
+		public override void LevelUp()
+		{
+			base.LevelUp();
+			Def += 5;
+			Console.WriteLine($"{Name}의 방어력이 올랐습니다!. {Def - 5} => {Atk}");
+		}
+	}
 
 }

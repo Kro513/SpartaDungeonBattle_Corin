@@ -242,7 +242,8 @@ namespace SpartaDungeonBattle_Corin
                 if (player.IsDead == false)
                 {
                     BattleEnd();
-                    BattleReword();
+                    BattleGetExp();
+					BattleReword();
                 }
             }
             public void BattleEnd()
@@ -262,6 +263,34 @@ namespace SpartaDungeonBattle_Corin
                 Console.WriteLine(">>");
                 Console.ReadKey();
             }
+
+            public void BattleGetExp()
+            {
+                Console.Clear();
+
+				int battleExperience = mobs.Count * 2;
+				Console.WriteLine($"{player.Name}이(가) 전투에서 승리하여 {battleExperience}의 경험치를 획득했습니다!");
+				player.Experience += battleExperience;
+
+				Console.WriteLine();
+                Console.WriteLine($"현재 {player.Name}의 레벨 : {player.Level}");
+                Console.WriteLine($"현재 {player.Name}의 경험치 : {player.Experience}");
+
+				int experienceToLevelUp = player.Level * 2 - player.Experience;
+				Console.WriteLine($"다음 레벨까지 필요한 경험치: {experienceToLevelUp}");
+
+                while (player.Experience >= player.Level * 2)
+				{
+					player.LevelUp();
+				}
+				Console.WriteLine("");
+				Console.WriteLine("0. 다음");
+				Console.WriteLine("");
+				Console.WriteLine(">>");
+				Console.ReadKey();
+
+
+			}
             public void BattleReword()
             {
                 Console.Clear();
