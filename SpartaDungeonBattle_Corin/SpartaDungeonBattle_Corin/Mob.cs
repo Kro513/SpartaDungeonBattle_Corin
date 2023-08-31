@@ -175,10 +175,10 @@ namespace SpartaDungeonBattle_Corin
                 Console.WriteLine();
                 Console.WriteLine($"Lv.{player.Level} {player.Name} {player.Class}");
                 Console.WriteLine();
-                Console.WriteLine($"Hp {player.Hp}/100");
+                Console.WriteLine($"Hp {player.Hp}/{player.MaxHp}");
                 Console.WriteLine("-----------------------------");
                 Console.WriteLine();
-                Console.WriteLine("0. 취소");
+                Console.WriteLine("0. 마을로 돌아가기");
                 Console.WriteLine("");
                 Console.WriteLine("대상을 선택해주세요");
                 Console.Write(">>");
@@ -227,16 +227,34 @@ namespace SpartaDungeonBattle_Corin
                                 else Console.WriteLine($"{mobs.IndexOf(text) + 1}.{text.Name} \tHp: {text.Hp}");
                             }
 
-                            enemy.OnAttack -= selectedMob.Takedamage;
+							Console.WriteLine("");
+							Console.WriteLine("");
+							Console.WriteLine("-----------------------------");
+							Console.WriteLine("[내정보]");
+							Console.WriteLine();
+							Console.WriteLine($"Lv.{player.Level} {player.Name} {player.Class}");
+							Console.WriteLine();
+							Console.WriteLine($"Hp {player.Hp}/{player.MaxHp}");
+							Console.WriteLine("-----------------------------");
+							Console.WriteLine();
+							Console.WriteLine("0. 마을로 돌아가기");
+							Console.WriteLine("");
+							Console.WriteLine("대상을 선택해주세요");
+							Console.Write(">>");
+							enemy.OnAttack -= selectedMob.Takedamage;
                             enemy.OnHeatAttack -= player.Takedamage;
 
                         }
                     }
-                    else
+					else if(input == 0)
+					{
+						DisplayGameIntro();
+					}
+
+					else
                     {
                         Console.WriteLine("올바른 값을 입력해주세요");
                     }
-
 
                 }
                 if (player.IsDead == false)
@@ -244,9 +262,6 @@ namespace SpartaDungeonBattle_Corin
                     BattleEnd();
                     BattleGetExp();
 					BattleReword();
-                    
-                    
-                    
                 }
             }
             public void BattleEnd()
@@ -275,17 +290,19 @@ namespace SpartaDungeonBattle_Corin
 				Console.WriteLine($"{player.Name}이(가) 전투에서 승리하여 {battleExperience}의 경험치를 획득했습니다!");
 				player.Experience += battleExperience;
 
+				while (player.Experience >= player.Level * 10)
+				{
+					player.LevelUp();
+				}
+
 				Console.WriteLine();
                 Console.WriteLine($"현재 {player.Name}의 레벨 : {player.Level}");
                 Console.WriteLine($"현재 {player.Name}의 경험치 : {player.Experience}");
 
-				int experienceToLevelUp = player.Level * 2 - player.Experience;
+				int experienceToLevelUp = player.Level * 10 - player.Experience;
 				Console.WriteLine($"다음 레벨까지 필요한 경험치: {experienceToLevelUp}");
 
-                while (player.Experience >= player.Level * 2)
-				{
-					player.LevelUp();
-				}
+                
 				Console.WriteLine("");
 				Console.WriteLine("0. 다음");
 				Console.WriteLine("");
@@ -316,7 +333,14 @@ namespace SpartaDungeonBattle_Corin
                         break;
                 }
 
-            }
+				Console.WriteLine("");
+				Console.WriteLine("0. 마을로 돌아가기");
+				Console.WriteLine("");
+				Console.WriteLine(">>");
+				Console.ReadKey();
+
+                DisplayGameIntro();
+			}
 
             public void RewordHp()
             {
