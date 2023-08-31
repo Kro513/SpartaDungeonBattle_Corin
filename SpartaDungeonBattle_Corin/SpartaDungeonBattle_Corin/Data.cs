@@ -86,10 +86,15 @@ namespace SpartaDungeonBattle_Corin
             Console.WriteLine("[적의 턴]");
             Console.WriteLine("");
             Console.WriteLine("{0}의 공격!", name1);
+            damage -= Def;
+            if(damage < 0)
+            {
+                damage = 0;
+            }
             Console.WriteLine("{0} 을(를) 맞췄습니다. [데미지 : {1}]", Name, damage);
             Console.WriteLine("");
             Console.WriteLine("{0}", Name);
-            Console.WriteLine("HP {0} -> {1}", Hp, Hp - damage);
+            Console.WriteLine("HP {0} -> {1}", Hp, Hp - damage );
             Hp -= damage;
             Console.WriteLine("");
             Console.WriteLine("0. 다음");
