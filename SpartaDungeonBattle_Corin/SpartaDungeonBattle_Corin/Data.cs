@@ -54,7 +54,7 @@ namespace SpartaDungeonBattle_Corin
 
         public virtual void LevelUp()
         {
-            Experience = Experience - (Level * 2);
+            Experience = Experience - (Level * 10);
 
             Level++;
             Console.WriteLine($"{Name}이 {Level}레벨로 레벨업했습니다!");
