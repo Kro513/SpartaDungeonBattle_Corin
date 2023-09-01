@@ -26,6 +26,8 @@ namespace SpartaDungeonBattle_Corin
         public int Level { get; set; }
         public int MaxHp { get; set; }
         public int Hp { get; set; }
+        public int MaxMp { get; set; }
+        public int Mp { get; set; }
         public int Atk { get; set; }
         public int Def { get; set; }
         public int Gold { get; set; }
@@ -34,7 +36,7 @@ namespace SpartaDungeonBattle_Corin
         public int Experience { get; set; }
 
 
-        public Character(string name, string classtype, int hp, int atk, int def, int gold, bool isDead, int maxHp)
+        public Character(string name, string classtype, int hp, int atk, int def, int gold, bool isDead, int maxHp, int mp, int maxMp)
         {
             Name = name;
             Class = classtype;
@@ -46,6 +48,8 @@ namespace SpartaDungeonBattle_Corin
             IsDead = false;
             Experience = 0;
             MaxHp = Hp;
+            Mp = mp;
+            MaxMp = Mp;
         }
 
         public virtual void LevelUp()
@@ -62,15 +66,38 @@ namespace SpartaDungeonBattle_Corin
                 case "전사":
 					Hp += 20;
                     MaxHp += 20;
+                    Mp += 2;
+					MaxMp += 2;
+					Atk += 2;
+                    Def += 2;
 					Console.WriteLine($"{Name}의 체력이 올랐습니다!. 현재 HP: {Hp}/{MaxHp}");
-                    break;
+					Console.WriteLine($"{Name}의 마나량이 올랐습니다!. 현재 HP: {Mp}/{MaxMp}");
+					Console.WriteLine($"{Name}의 공격력이 올랐습니다!. {Atk - 2} => {Atk}");
+					Console.WriteLine($"{Name}의 방어력이 올랐습니다!. {Def - 2} => {Def}");
+					break;
                 case "궁수":
-					Atk += 5;
-					Console.WriteLine($"{Name}의 공격력이 올랐습니다!. {Atk - 5} => {Atk}");
-                    break;
+					Hp += 10;
+					MaxHp += 10;
+					Mp += 1;
+					MaxMp += 1;
+					Atk += 3;
+                    Def += 1;
+					Console.WriteLine($"{Name}의 체력이 올랐습니다!. 현재 HP: {Hp}/{MaxHp}");
+					Console.WriteLine($"{Name}의 마나량이 올랐습니다!. 현재 HP: {Mp}/{MaxMp}");
+					Console.WriteLine($"{Name}의 공격력이 올랐습니다!. {Atk - 3} => {Atk}");
+					Console.WriteLine($"{Name}의 방어력이 올랐습니다!. {Def - 1} => {Def}");
+					break;
                 case "마법사":
-					Def += 5;
-					Console.WriteLine($"{Name}의 방어력이 올랐습니다!. {Def - 5} => {Def}");
+					Hp += 10;
+					MaxHp += 10;
+					Mp += 3;
+					MaxMp += 3;
+					Atk += 1;
+					Def += 3;
+					Console.WriteLine($"{Name}의 체력이 올랐습니다!. 현재 HP: {Hp}/{MaxHp}");
+					Console.WriteLine($"{Name}의 마나량이 올랐습니다!. 현재 HP: {Mp}/{MaxMp}");
+					Console.WriteLine($"{Name}의 공격력이 올랐습니다!. {Atk - 1} => {Atk}");
+					Console.WriteLine($"{Name}의 방어력이 올랐습니다!. {Def - 3} => {Def}");
                     break;
 			}
         }
@@ -86,7 +113,7 @@ namespace SpartaDungeonBattle_Corin
             Console.WriteLine("[적의 턴]");
             Console.WriteLine("");
             Console.WriteLine("{0}의 공격!", name1);
-            damage -= Def;
+            damage -= Def / 3;
             if(damage < 0)
             {
                 damage = 0;
@@ -116,7 +143,7 @@ namespace SpartaDungeonBattle_Corin
     //캐릭터 상속 -> 워리어
     public class Warrior : Character
     {
-        public Warrior() : base("", "", 100, 10, 10, 1500, false, 100)
+        public Warrior() : base("", "", 100, 10, 10, 1500, false, 100, 20, 20)
         {
 
 
@@ -130,7 +157,7 @@ namespace SpartaDungeonBattle_Corin
     //캐릭터 상속 -> 메이지
     public class Mage : Character
     {
-        public Mage() : base("", "", 100, 10, 10, 1500, false, 100)
+        public Mage() : base("", "", 100, 10, 10, 1500, false, 100, 40, 40)
         {
         }
 
@@ -143,7 +170,7 @@ namespace SpartaDungeonBattle_Corin
     //캐릭터 상속 -> 아처
     public class Archer : Character
     {
-        public Archer() : base("", "", 100, 10, 10, 1500, false, 100)
+        public Archer() : base("", "", 100, 10, 10, 1500, false, 100, 10, 10)
         {
 
         }

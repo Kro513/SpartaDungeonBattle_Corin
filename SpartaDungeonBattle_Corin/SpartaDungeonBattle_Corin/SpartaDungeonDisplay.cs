@@ -13,7 +13,7 @@ namespace SpartaDungeonBattle_Corin
 
     public class Program
     {
-        public static Character player = new Character("", "", 0, 0, 0, 0, false, 0);
+        public static Character player = new Character("", "", 0, 0, 0, 0, false, 0, 0, 0);
 
         public delegate void TakedamageHandler(int damage, string name);
 
@@ -22,7 +22,6 @@ namespace SpartaDungeonBattle_Corin
         {
             DisplayStartScreen();
             DisplayGameIntro();
-
         }
 
 
@@ -85,7 +84,8 @@ namespace SpartaDungeonBattle_Corin
                     player.Atk = random.Next(1, 11);
                     player.Def = random.Next(1, 11);
                     player.Hp = random.Next(80, 110);
-                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp);
+                    player.Mp = random.Next(4, 6);
+                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp, player.Mp, player.MaxMp);
 
                     break;
                 case 2:
@@ -93,14 +93,16 @@ namespace SpartaDungeonBattle_Corin
                     player.Atk = random.Next(1, 11);
                     player.Def = random.Next(6, 11);
                     player.Hp = random.Next(50, 110);
-                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp);
+					player.Mp = random.Next(6, 8);
+					player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp, player.Mp, player.MaxMp);
 					break;
                 case 3:
                     player.Class = "궁수";
                     player.Atk = random.Next(6, 11);
                     player.Def = random.Next(1, 11);
                     player.Hp = random.Next(50, 110);
-                    player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp);
+					player.Mp = random.Next(2, 4);
+					player = new Character(player.Name, player.Class, player.Hp, player.Atk, player.Def, 1500, false, player.MaxHp, player.Mp, player.MaxMp);
 					break;
             }
 
@@ -153,7 +155,8 @@ namespace SpartaDungeonBattle_Corin
             Console.WriteLine($"공격력 : {player.Atk}");
             Console.WriteLine($"방어력 : {player.Def}");
             Console.WriteLine($"체력 : {player.Hp}");
-            Console.WriteLine($"Gold : {player.Gold} G\n");
+			Console.WriteLine($"마나 : {player.Mp}");
+			Console.WriteLine($"Gold : {player.Gold} G\n");
 
             Console.WriteLine();
             Console.WriteLine("0. 나가기");

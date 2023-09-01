@@ -176,7 +176,8 @@ namespace SpartaDungeonBattle_Corin
                 Console.WriteLine($"Lv.{player.Level} {player.Name} {player.Class}");
                 Console.WriteLine();
                 Console.WriteLine($"Hp {player.Hp}/{player.MaxHp}");
-                Console.WriteLine("-----------------------------");
+				Console.WriteLine($"Hp {player.Mp}/{player.MaxMp}");
+				Console.WriteLine("-----------------------------");
                 Console.WriteLine();
                 Console.WriteLine("0. 마을로 돌아가기");
                 Console.WriteLine("");
